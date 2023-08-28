@@ -12,12 +12,13 @@ describe('PaintService', () => {
     it('should suggest paint cans based on quantity', () => {
       const quantity = 19;
       const suggestedCans = paintService.suggestPaintCans(quantity);
+
       const expectedSuggestedCans = [
         PaintCanSize.EXTRA_LARGE,
-        PaintCanSize.LARGE,
-        PaintCanSize.MEDIUM,
+        PaintCanSize.SMALL,
         PaintCanSize.SMALL,
       ];
+
       expect(suggestedCans).toEqual(expectedSuggestedCans);
     });
   });

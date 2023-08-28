@@ -1,4 +1,3 @@
-// paint.controller.ts
 import { Controller, Post, Body } from '@nestjs/common';
 import { PaintService } from '../services/paint.service';
 import { RoomDto } from '../models/room.dto'; // Importe o DTO aqui

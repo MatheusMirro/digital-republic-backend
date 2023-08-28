@@ -17,7 +17,7 @@ export class PaintService {
     return totalPaintRequired;
   }
 
-  private calculateWallPaintRequired(wall: Wall): number {
+  public calculateWallPaintRequired(wall: Wall): number {
     const wallArea = wall.width * wall.height;
     const subtractedArea = this.calculateSubtractedArea(wall);
     const paintableArea = wallArea - subtractedArea;
@@ -26,7 +26,7 @@ export class PaintService {
     return paintRequired;
   }
 
-  private calculateSubtractedArea(wall: Wall): number {
+  public calculateSubtractedArea(wall: Wall): number {
     const doorArea = wall.numDoors * DoorDimensions.doorSize; // Each door is 0.80x1.90 (1.52 m²)
 
     const windowArea = wall.numWindows * WindowDimensions.windowSize; // Each window is 2.00x1.20 (2.4 m²)
